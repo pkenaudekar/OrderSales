@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="OrderSales.WebApp.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>  
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />   
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css"
+        rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            $('[id*=gvwCustomer]').footable();
+            $('[id*=gvwProduct]').footable();
+        });
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Fly High Enterprises</h1>
+        <ul>
+            <li><a href="Default.aspx">Home</a></li>
+            <li><a href="Customers.aspx">Customers</a></li>
+            <li><a href="Products.aspx">Products</a></li>
+            <li><a href="Orders.aspx">Orders</a></li>
+        </ul>
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
